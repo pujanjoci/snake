@@ -1,0 +1,98 @@
+/* Black background for the whole page */
+body {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Center the game container */
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Style the canvas */
+/* Default Canvas Size (For Desktop) */
+canvas {
+    border: 2px solid white;
+    display: block;
+    width: 400px;
+    height: 400px;
+}
+
+/* Adjust Canvas Size for Mobile Devices */
+@media (max-width: 600px) {
+    canvas {
+        width: 300px;  /* Smaller width for mobile */
+        height: 300px; /* Smaller height for mobile */
+    }
+}
+
+/* Score display */
+#score {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Start button */
+#startButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#startButton:hover {
+    background-color: #45a049;
+}
+
+/* Mobile Controls */
+#mobileControls {
+    display: none; /* Hidden on desktop */
+    position: absolute;
+    bottom: -160px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.control-btn {
+    background-color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.control-btn:active {
+    background-color: gray;
+}
+
+/* Only show controls on mobile */
+@media (max-width: 600px) {
+    #mobileControls {
+        display: flex;
+    }
+}
